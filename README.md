@@ -117,18 +117,25 @@ ROI: 0.245000
 ## 🧪 Example Configuration
 
 ```python
-# config/example_config.py
 CONFIG = {
-    "FCI_L1": 500000,      # Fixed capital investment L1
-    "FCI_L2": 100000,      # Fixed capital investment L2
-    "WC": 50000,           # Working capital
-    "S": 25000,            # Salvage value
-    "intr": 0.12,          # Discount rate (12%)
-    "t": 0.25,             # Tax rate (25%)
-    "R_scalar": 200000,    # Annual revenue
-    "COM_scalar": 120000,  # Annual operating costs
-    "periods": 10,         # Analysis period
-    "life_years": 7        # Depreciation life
+    "FCI_L1": 175.0,
+    "FCI_L2": 125.0,
+    "L": 10.0,
+    "WC": 20.0,
+    "S": 10.0,
+    "intr": 0.08,   # discount rate
+    "t": 0.25,      # tax rate
+    # Scalar revenue and COM per period (periods 0..12); first 3 will be ignored for ops
+    "R_scalar": 110.0,
+    "COM_scalar": 30.0,
+    # Depreciation horizon mapping: indices 3..9 carry annual depreciation; >=10 write-off remaining BV
+    "life_years": 7,         # useful life for planned depreciation years
+    "depr_start_idx": 3,     # first operating year index (0-based) for depreciation charges
+    "periods": 13,
+    # DCFROR scan range
+    "irr_scan_min": 0.05,
+    "irr_scan_max": 0.30,
+    "irr_scan_points": 10000,
 }
 ```
 
@@ -171,4 +178,5 @@ This project is licensed under the MIT License - see LICENSE file for details.
 ***
 
 *This project serves as a comprehensive demonstration of financial modeling, software architecture, and data visualization techniques for investment and accounting analysis.*
+
 
