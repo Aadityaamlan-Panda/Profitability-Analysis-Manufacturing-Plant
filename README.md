@@ -1,4 +1,4 @@
-### 📊 Depreciation & Discounted Cash Flow (DCF) Financial Analysis Tool
+# 📊 Depreciation & Discounted Cash Flow (DCF) Financial Analysis Tool
 
 **A comprehensive Python toolkit for depreciation calculations, discounted cash flow forecasting, and financial metrics analysis with interactive CLI and visualization capabilities.**
 
@@ -171,3 +171,4 @@ This project is licensed under the MIT License - see LICENSE file for details.
 ***
 
 *This project serves as a comprehensive demonstration of financial modeling, software architecture, and data visualization techniques for investment and accounting analysis.*
+
